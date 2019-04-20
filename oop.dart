@@ -9,7 +9,7 @@ void main()
  
   
   print("${c.age}");
-  var d = Dog();
+  var d = Dog("fdgdwgwdg");
   
 }
 //=============   Animal  Class Code ++++++++++++++++++++++++++++++++++++++++
@@ -26,7 +26,10 @@ void main()
        Animal.Con(){
             print("it is a customize contructor of Animal calss");
                       }
-    
+   
+    Animal.pass(String s){
+       print("it is a customize contructor of Animal class   $s");
+    }
       ///==============Methods   
      void eat(){
       print (" calling Animal is eaating");
@@ -74,7 +77,7 @@ class Dog extends Animal{
 
   String height;
   
-  Dog():super.Con();  // calling the super constructor custmize
+  Dog(String s):super.pass(s);  // calling the super constructor custmize
   
   
   @override
