@@ -1,36 +1,54 @@
-***********************************
-CLASS GETTER SETTER INHERITANCE  samples
-*****************************************
-
 void main()
 {
   var c = Cat();
-  c.age=20;
+ // c.age=20;
+ 
   c.eat();
-  c.speed();  
+  c.speed(); 
+  var an = Animal.Con(); // instance with customize constructor
+ 
   
   print("${c.age}");
+  var d = Dog();
   
 }
-
-abstract class Animal{
+//=============   Animal  Class Code ++++++++++++++++++++++++++++++++++++++++
+ class Animal{
   
   String catg;
-  int age;
-     Animal() { print("i m animal constructor"); }     // class constructor     // class constructor
+  int age= 90;
+   
+   //===Methods
+   Animal() { print("i m animal constructor"); }   // class constructor  
+   
+   
+       // Costumize Constructor
+       Animal.Con(){
+            print("it is a customize contructor of Animal calss");
+                      }
     
-         
+      ///==============Methods   
      void eat(){
       print (" calling Animal is eaating");
     }
-    void speed(){
-      print ("Animal is speeding");
-    }
+     void speed() =>  print ("Animal is speeding");
+   
   }
+
+
+//=============  Cat Class Code ++++++++++++++++++++++++++++++++++++++++
 class Cat extends  Animal{
  int nb;
+  
+  
+  
   Cat():super();  // calling constructor class super
-  void set nbr(int n)=> nb = n*2 ; // setter method
+  
+  
+  
+     void set nbr(int n)=> nb = n*2 ; // setter method
+  
+  
     int get nbr=> nb; // getter method 
   
   
@@ -49,9 +67,14 @@ class Cat extends  Animal{
   void speed ()=>  print("calling method speed from class Cat"); 
   
 }
+
+
+//=============Dog Class Code ++++++++++++++++++++++++++++++++++++++++
 class Dog extends Animal{
 
   String height;
+  
+  Dog():super.Con();  // calling the super constructor custmize
   
   
   @override
