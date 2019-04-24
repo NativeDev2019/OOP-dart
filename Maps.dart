@@ -1,6 +1,15 @@
 void main() {
   
   
+   Map<String,int> CountriesCat = {  // method using literal to create map
+    "USA":1,
+    "GBR":44,
+    "ALG":213
+      
+  };
+  
+   print("\n");
+CountriesCat.forEach((key,value)=> print ("key : $key   value:  $value")); // using lamda
   
   
    Map<String,String> fruits = Map(); // using constructor  Map<key,value>
