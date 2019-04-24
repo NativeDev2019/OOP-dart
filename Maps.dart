@@ -3,7 +3,7 @@ void main() {
   
   
   
-  Map<String,String> fruits = Map(); // using constructor  Map<key,value>
+   Map<String,String> fruits = Map(); // using constructor  Map<key,value>
    print("************************Map Begin*******************");
   fruits["Apple"] = "Green";
   fruits["Bananas"] = "Yellow";
@@ -18,6 +18,13 @@ void main() {
   }
   print("\n");
   fruits.forEach((key,value)=> print ("key : $key   value:  $value")); // using lamda
+  
+  if(fruits.containsKey("Know")){
+    fruits.update("Apple",(value)=>"Red");
+     fruits.forEach((key,value)=> print ("key : $key   value:  $value")); // using lamda
+  }
+   print("\n");
+ 
   
   
   
